@@ -21,7 +21,7 @@ on (e.emp_no=s.emp_no)
 --List the first name, last name, and hire date for the employees who were hired in 1986
 SELECT first_name, last_name, hire_date
 FROM employees
-WHERE hire_date LIKE '%1986';
+WHERE EXTRACT (YEAR FROM hire_date) =1986;
 
 
 
