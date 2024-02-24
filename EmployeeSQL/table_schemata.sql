@@ -1,19 +1,18 @@
--- delete folders
-DROP TABLE IF EXISTS departments;
-DROP TABLE IF EXISTS dept_emp;
-DROP TABLE IF EXISTS dept_manager;
-DROP TABLE IF EXISTS salaries;
-DROP TABLE IF EXISTS employees;
-DROP TABLE IF EXISTS titles;
+-- Delete tables
+DROP TABLE IF EXISTS employees CASCADE;
+DROP TABLE IF EXISTS titles CASCADE;
+DROP TABLE IF EXISTS dept_emp CASCADE;
+DROP TABLE IF EXISTS dept_manager CASCADE;
+DROP TABLE IF EXISTS salaries CASCADE;
+DROP TABLE IF EXISTS employees CASCADE;
+DROP TABLE IF EXISTS departments CASCADE;
+
 
 --- Create tables and import data --- 
 
 
 
 --- titles ---
-
--- Drop table if exists
-DROP TABLE IF EXISTS titles;
 
 -- Create new table: 
 CREATE TABLE titles (
@@ -27,9 +26,6 @@ SELECT * FROM titles;
 
 
 --- employees ---
-
--- Drop table if exists
-DROP TABLE IF EXISTS employees;
 
 -- Create new table: 
 CREATE TABLE employees (
@@ -50,9 +46,6 @@ SELECT * FROM employees;
 
 --- departments ---
 
--- Drop table if exists
-
-
 -- Create new table: 
 CREATE TABLE departments (
 	dept_no VARCHAR PRIMARY KEY NOT NULL,
@@ -64,12 +57,7 @@ SELECT * FROM departments;
  
 
 
-
 --- dept_emp ---
-
--- Drop table if exists
-
-DROP TABLE IF EXISTS dept_emp;
 
 -- Create new table: 
 CREATE TABLE dept_emp (
@@ -85,12 +73,7 @@ SELECT * FROM dept_emp;
 
 
 
-
-
 --- dept_manager ---
-
--- Drop table if exists
-DROP TABLE IF EXISTS dept_manager;
 
 -- Create new table: 
 CREATE TABLE dept_manager (
@@ -106,11 +89,7 @@ SELECT * FROM dept_manager;
 
 
 
-
 --- salaries ---
-
--- Drop table if exists
-
 
 -- Create new table: 
 CREATE TABLE salaries (
@@ -122,14 +101,5 @@ CREATE TABLE salaries (
 
 -- Verify successful data import: 
 SELECT * FROM salaries;
-
-
-
-
-
-
-
-
-
 
 
